@@ -11,10 +11,10 @@ var (
 	matrixB = [][]int{{9, -3, 7},
 		{4, 1, -2},
 		{6, 5, -4}}
+
+	result [][]int
 )
 
 func main() {
-	fmt.Printf("%T", matrixA)
-	fmt.Printf("%T", matrixB)
-
+	
 }
