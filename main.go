@@ -20,7 +20,12 @@ func main() {
 	for row := 0; row < matrixSize; row++ {
 		for col := 0; col < matrixSize; col++ {
 			for i := 0; i < matrixSize; i++ {
-				result[row][col] += matrixA[row][i] * matrixB[col][i]
+				// Formular:
+				// [r1c1*r1c1+r1c2*r2c1         r1c1*r1c2+r1c2*r2c2]
+				// [r2c1*r1c+r2c2*r2c1          r2c2*r1c2+r2c2*r2c2]
+				
+
+				result[row][col] += matrixA[row][i] * matrixB[i][col]
 
 			}
 		}
