@@ -5,6 +5,8 @@ import (
 	"math/rand"
 	"sync"
 	"time"
+
+	"com.github/Barrier"
 )
 
 const matrixSize = 4
@@ -16,11 +18,10 @@ var (
 
 	result [matrixSize][matrixSize]int
 
-	rwLock = sync.RWMutex{}
 
-	condition = sync.NewCond(rwLock.RLocker())
+	barrierOne = barrier.NewBarrier(4)
 
-	wg = sync.WaitGroup{}
+	barrierTwo = barrier.NewBarrier(4)
 )
 
 func preformatRow(row int) {
