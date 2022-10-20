@@ -9,7 +9,7 @@ import (
 )
 
 // Define the matrix size
-const matrixSize = 4
+const matrixSize = 3
 
 var (
 	// Declara the matricies
